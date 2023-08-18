@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 81%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 5vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card1 {
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0% left 80%;
+  background-color: hsl(263, 55%, 52%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  grid-column: 1/span 2;
+  grid-row: 1/span 1;
+  color: white;
+}
+.card1 > p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+.card1 > p:last-child {
+  margin-top: 1.5rem;
+  line-height: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card2 {
+  background-color: hsl(217, 19%, 35%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  grid-row: 1/span 1;
+  color: white;
+}
+.card2 > p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+.card2 > p:last-child {
+  margin-top: 1.5rem;
+  line-height: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card3 {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  grid-row: 1/span 2;
+}
+.card3 > p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+.card3 > p:last-child {
+  line-height: 1.4rem;
+  margin-top: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card4 {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.card4 > p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+.card4 > p:last-child {
+  line-height: 1.4rem;
+  margin-top: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card5 {
+  background-color: hsl(219, 29%, 14%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  grid-column: 2/span 2;
+  color: white;
+}
+.card5 > p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+.card5 > p:last-child {
+  margin-top: 1.5rem;
+  line-height: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.flex img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.flex img.purple {
+  border: 3px solid hsl(263, 65%, 68%);
+}
+.flex img.white {
+  border: 3px solid white;
+}
+.flex .detailsB {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.flex .detailsB p:last-child {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+}
+.flex .detailsW {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.flex .detailsW p:last-child {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+}
+.flex .detailsWS {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.flex .detailsWS p:last-child {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1279px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2.5vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1023px) {
+  main {
+    display: grid;
+    grid-template-columns: 80vw;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .card1 {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+  }
+  .card2 {
+    grid-row: 2/span 1;
+  }
+  .card3 {
+    grid-row: 5/span 1;
+  }
+  .card4 {
+    grid-row: 3/span 1;
+  }
+  .card5 {
+    grid-row: 4/span 1;
+    grid-column: 1/span 1;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    display: grid;
+    grid-template-columns: 90vw;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
